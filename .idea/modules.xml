@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/checklistdatacenter.iml" filepath="$PROJECT_DIR$/checklistdatacenter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/checklistdatacenter_android.iml" filepath="$PROJECT_DIR$/android/checklistdatacenter_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checklist.iml" filepath="$PROJECT_DIR$/checklist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/checklist_android.iml" filepath="$PROJECT_DIR$/android/checklist_android.iml" />
     </modules>
   </component>
 </project>

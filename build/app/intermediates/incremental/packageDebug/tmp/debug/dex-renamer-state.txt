@@ -1,4 +1,4 @@
-#Fri Aug 12 19:03:45 ICT 2022
-base.0=C\:\\Users\\STRIX\\Documents\\GitHub\\Checklist-Data-Center\\Checklist-Data-Center\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Wed Aug 17 16:26:57 ICT 2022
+base.0=D\:\\checklist\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

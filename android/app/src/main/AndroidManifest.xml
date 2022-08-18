@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.checklistdatacenter">
+    package="com.kanaeru.checklist">
    <application
-        android:label="checklistdatacenter"
+        android:label="checklist"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
