@@ -1,3 +1,4 @@
+import 'package:checklist/package.flutter/aspek.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -10,7 +11,7 @@ class timepick extends StatefulWidget {
 }
 
 class _statetimerPick extends State<timepick> {
-  DateTime _dateTime = DateTime(2022, 1, 1);
+  DateTime _dateTime = DateTime.now();
   TimeOfDay time = TimeOfDay.now();
   DateTime date = DateTime.now();
 
@@ -64,6 +65,14 @@ class _statetimerPick extends State<timepick> {
                     lastDate: DateTime(2100));
                 if (newDate == null) return;
                 setState(() => _dateTime = newDate);
+              },
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              child: Text('Next'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => aspekMenu()));
               },
             )
           ],
