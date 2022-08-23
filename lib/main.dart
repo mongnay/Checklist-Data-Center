@@ -1,3 +1,4 @@
+import 'package:checklist/temperature.dart';
 import 'package:flutter/material.dart';
 
 import 'homapage.dart';
@@ -11,9 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: HomeScreen()
-    );
+    return MaterialApp(title: 'Welcome to Flutter', home: HomeScreen());
   }
 }
