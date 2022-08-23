@@ -1,4 +1,6 @@
 import 'package:checklist/calenderPick.dart';
+import 'package:checklist/package.flutter/electric.dart';
+import 'package:checklist/package.flutter/jaringan.dart';
 import 'package:checklist/package.flutter/keterangan.dart';
 import 'package:checklist/temperature.dart';
 import 'package:flutter/material.dart';
@@ -64,7 +66,12 @@ class aspekMenu extends StatelessWidget {
             Padding(
               padding: EdgeInsets.fromLTRB(20, 220, 0, 0),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => electricmenu()),
+                  );
+                },
                 color: Color(0xff3821c7),
                 elevation: 0,
                 shape: RoundedRectangleBorder(
@@ -87,7 +94,12 @@ class aspekMenu extends StatelessWidget {
             Padding(
               padding: EdgeInsets.fromLTRB(20, 260, 0, 0),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => jaringanmenu()),
+                  );
+                },
                 color: Color(0xff3531b9),
                 elevation: 0,
                 shape: RoundedRectangleBorder(
