@@ -22,6 +22,7 @@ class temperMenu extends StatelessWidget {
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                       ),
+                      //style: TextStyle(color: Input > 10 ? Colors.redAccent : Colors.green),
                     ))
               ]),
             ),

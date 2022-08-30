@@ -1,11 +1,9 @@
 import 'package:checklist/calenderPick.dart';
 import 'package:checklist/package.flutter/komponen.dart';
-import 'package:checklist/package.flutter/shiftselection.dart';
 import 'package:flutter/material.dart';
-import 'timerPick.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class shiftselectionMenu extends StatelessWidget {
+  const shiftselectionMenu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +18,7 @@ class HomeScreen extends StatelessWidget {
           borderRadius: BorderRadius.zero,
         ),
         title: Text(
-          "Checklist Data Center",
+          "Check List Backup System",
           style: TextStyle(
             fontWeight: FontWeight.w400,
             fontStyle: FontStyle.normal,
@@ -40,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => timepick()),
+                    MaterialPageRoute(builder: (context) => komponenMenu()),
                   );
                 },
                 color: Color(0xff3531b9),
@@ -50,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Text(
-                  "Daily Checklist Data Center",
+                  "Shift 1",
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
@@ -68,8 +66,7 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => shiftselectionMenu()),
+                    MaterialPageRoute(builder: (context) => komponenMenu()),
                   );
                 },
                 color: Color(0xff3821c7),
@@ -79,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 padding: EdgeInsets.fromLTRB(16, 16, 16, 10),
                 child: Text(
-                  "Check List Backup System",
+                  "Shift 2",
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
@@ -87,6 +84,34 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 textColor: Color(0xffffffff),
+                height: 40,
+                minWidth: 220,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(20, 260, 0, 0),
+              child: MaterialButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => komponenMenu()),
+                  );
+                },
+                color: Color(0xff3531b9),
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: Text(
+                  "Shift 3",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                  ),
+                ),
+                textColor: Color(0xfffbfbfb),
                 height: 40,
                 minWidth: 220,
               ),
