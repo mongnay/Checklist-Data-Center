@@ -45,6 +45,13 @@ class electricmenustate extends State<electricmenu> {
               ),
             ]),
           ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
+          ),
           Container(
             width: 1000,
             child: Row(children: [
@@ -71,6 +78,13 @@ class electricmenustate extends State<electricmenu> {
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,

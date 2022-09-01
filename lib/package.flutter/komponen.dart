@@ -1,7 +1,6 @@
 import 'package:checklist/calenderPick.dart';
 import 'package:checklist/package.flutter/backupvm.dart';
 import 'package:checklist/package.flutter/dump.dart';
-import 'package:checklist/package.flutter/keterangancheckbackup.dart';
 import 'package:checklist/package.flutter/replicatevm.dart';
 import 'package:checklist/package.flutter/rman.dart';
 import 'package:checklist/temperature.dart';
@@ -138,35 +137,6 @@ class komponenMenu extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(16, 16, 16, 10),
                 child: Text(
                   "Replicate VM",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    fontStyle: FontStyle.normal,
-                  ),
-                ),
-                textColor: Color(0xffffffff),
-                height: 40,
-                minWidth: 220,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(20, 340, 0, 0),
-              child: MaterialButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => keteranganbackupMenu()),
-                  );
-                },
-                color: Color(0xff3821c7),
-                elevation: 0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.zero,
-                ),
-                padding: EdgeInsets.fromLTRB(16, 16, 16, 10),
-                child: Text(
-                  "Keterangan",
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,

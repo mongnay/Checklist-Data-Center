@@ -55,9 +55,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJMail = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -82,9 +95,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJSKA = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -109,9 +135,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJDC2 = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -136,9 +175,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJFilesvr = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -163,9 +215,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJFilesvr2 = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -190,9 +255,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJFilesvr3 = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -217,9 +295,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJEproc = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -244,9 +335,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJGIS = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -271,9 +375,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJksvsvr = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -298,9 +415,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJMetabase = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -325,9 +455,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJCaterLuar = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -352,9 +495,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJCaterSBY = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -379,9 +535,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJWebsiteSBY = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -406,9 +575,22 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueRJTablue = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -432,6 +614,12 @@ class replicatevmmenustate extends State<replicatevmmenu> {
                     groupValue: selectedValueRJTapesvr,
                     onChanged: (value) =>
                         setState(() => selectedValueRJTapesvr = 2),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
                   ),
                 ]),
               ),

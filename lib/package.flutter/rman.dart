@@ -39,6 +39,12 @@ class rmanmenustate extends State<rmanmenu> {
                     groupValue: selectedValue,
                     onChanged: (value) => setState(() => selectedValue = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),

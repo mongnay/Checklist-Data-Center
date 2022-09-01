@@ -55,9 +55,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueSMail = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -80,9 +93,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     groupValue: selectedValueSSKA,
                     onChanged: (value) => setState(() => selectedValueSSKA = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -105,9 +131,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     groupValue: selectedValueSDC2,
                     onChanged: (value) => setState(() => selectedValueSDC2 = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -132,9 +171,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueSFilesvr = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -159,9 +211,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueSFilesvr2 = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -186,9 +251,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueSFilesvr3 = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -213,9 +291,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueSEproc = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -238,9 +329,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     groupValue: selectedValueSGIS,
                     onChanged: (value) => setState(() => selectedValueSGIS = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -265,9 +369,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueSksvsvr = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -292,9 +409,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueSMetabase = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -319,9 +449,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueSCaterLuar = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -346,9 +489,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueSCaterSBY = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -373,9 +529,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueSWebsiteSBY = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -400,9 +569,22 @@ class backupvmmenustate extends State<backupvmmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValueSTablue = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -426,6 +608,12 @@ class backupvmmenustate extends State<backupvmmenu> {
                     groupValue: selectedValueSTapesvr,
                     onChanged: (value) =>
                         setState(() => selectedValueSTapesvr = 2),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
                   ),
                 ]),
               ),

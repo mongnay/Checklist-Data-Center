@@ -21,7 +21,7 @@ class dumpmenustate extends State<dumpmenu> {
       body: Container(
         width: double.infinity,
         padding: EdgeInsets.all(20),
-        child: Column(children: [
+        child: ListView(children: [
           Container(
             width: 1000,
             child: Row(children: [
@@ -45,9 +45,22 @@ class dumpmenustate extends State<dumpmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValuepdamnet = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -72,9 +85,22 @@ class dumpmenustate extends State<dumpmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValue12pdam = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -99,9 +125,22 @@ class dumpmenustate extends State<dumpmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValuedbpost = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -126,9 +165,22 @@ class dumpmenustate extends State<dumpmenu> {
                     onChanged: (value) =>
                         setState(() => selectedValuedbout = 2),
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ]),
               ),
             ]),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 25,
+            thickness: 1,
+            indent: 5,
+            endIndent: 5,
           ),
           Container(
             width: 1000,
@@ -150,6 +202,12 @@ class dumpmenustate extends State<dumpmenu> {
                     title: Text('Failed'),
                     groupValue: selectedValuegis,
                     onChanged: (value) => setState(() => selectedValuegis = 2),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Keterangan',
+                      border: OutlineInputBorder(),
+                    ),
                   ),
                 ]),
               ),
