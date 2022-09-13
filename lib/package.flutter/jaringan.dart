@@ -6,9 +6,9 @@ class jaringanmenu extends StatefulWidget {
 }
 
 class jaringanmenustate extends State<jaringanmenu> {
-  int selectedValueNgagel = 0;
-  int selectedValueGudang = 0;
-  int selectedValueKarangPilang = 0;
+  String selectedValueNgagel = '';
+  String selectedValueGudang = '';
+  String selectedValueKarangPilang = '';
 
   @override
   Widget build(BuildContext context) {
@@ -28,20 +28,20 @@ class jaringanmenustate extends State<jaringanmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 3,
+                  RadioListTile(
+                    value: 'Available',
                     title: Text('Available'),
                     groupValue: selectedValueNgagel,
                     onChanged: (value) =>
-                        setState(() => selectedValueNgagel = 3),
+                        setState(() => selectedValueNgagel = 'Available'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 4,
+                  RadioListTile(
+                    value: 'Unavailable',
                     title: Text('Unavailable'),
                     groupValue: selectedValueNgagel,
                     onChanged: (value) =>
-                        setState(() => selectedValueNgagel = 4),
+                        setState(() => selectedValueNgagel = 'Unavailable'),
                   ),
                 ]),
               ),
@@ -62,20 +62,20 @@ class jaringanmenustate extends State<jaringanmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 3,
+                  RadioListTile(
+                    value: 'Available',
                     title: Text('Available'),
                     groupValue: selectedValueGudang,
                     onChanged: (value) =>
-                        setState(() => selectedValueGudang = 3),
+                        setState(() => selectedValueGudang = 'Available'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 4,
+                  RadioListTile(
+                    value: 'Unavailable',
                     title: Text('Unavailable'),
                     groupValue: selectedValueGudang,
                     onChanged: (value) =>
-                        setState(() => selectedValueGudang = 4),
+                        setState(() => selectedValueGudang = 'Unavailable'),
                   ),
                 ]),
               ),
@@ -96,20 +96,20 @@ class jaringanmenustate extends State<jaringanmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 3,
+                  RadioListTile(
+                    value: 'Available',
                     title: Text('Available'),
                     groupValue: selectedValueKarangPilang,
                     onChanged: (value) =>
-                        setState(() => selectedValueKarangPilang = 3),
+                        setState(() => selectedValueKarangPilang = 'Available'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 4,
+                  RadioListTile(
+                    value: 'Unavailable',
                     title: Text('Unavailable'),
                     groupValue: selectedValueKarangPilang,
-                    onChanged: (value) =>
-                        setState(() => selectedValueKarangPilang = 4),
+                    onChanged: (value) => setState(
+                        () => selectedValueKarangPilang = 'Unavailable'),
                   ),
                 ]),
               ),

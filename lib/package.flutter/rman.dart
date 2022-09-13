@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
+//selectedValuerman
 class rmanmenu extends StatefulWidget {
   @override
   rmanmenustate createState() => rmanmenustate();
 }
 
 class rmanmenustate extends State<rmanmenu> {
-  int selectedValue = 0;
+  String selectedValuerman = '';
 
   @override
   Widget build(BuildContext context) {
@@ -26,18 +27,20 @@ class rmanmenustate extends State<rmanmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: "Success",
                     title: Text('Success'),
-                    groupValue: selectedValue,
-                    onChanged: (value) => setState(() => selectedValue = 1),
+                    groupValue: selectedValuerman,
+                    onChanged: (value) =>
+                        setState(() => selectedValuerman = "Success"),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
-                    groupValue: selectedValue,
-                    onChanged: (value) => setState(() => selectedValue = 2),
+                    groupValue: selectedValuerman,
+                    onChanged: (value) =>
+                        setState(() => selectedValuerman = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(

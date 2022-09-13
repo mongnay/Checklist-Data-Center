@@ -6,21 +6,21 @@ class backupvmmenu extends StatefulWidget {
 }
 
 class backupvmmenustate extends State<backupvmmenu> {
-  int selectedValueSMail = 0;
-  int selectedValueSSKA = 0;
-  int selectedValueSDC2 = 0;
-  int selectedValueSFilesvr = 0;
-  int selectedValueSFilesvr2 = 0;
-  int selectedValueSFilesvr3 = 0;
-  int selectedValueSEproc = 0;
-  int selectedValueSGIS = 0;
-  int selectedValueSksvsvr = 0;
-  int selectedValueSMetabase = 0;
-  int selectedValueSCaterLuar = 0;
-  int selectedValueSCaterSBY = 0;
-  int selectedValueSWebsiteSBY = 0;
-  int selectedValueSTablue = 0;
-  int selectedValueSTapesvr = 0;
+  String selectedValueSMail = '';
+  String selectedValueSSKA = '';
+  String selectedValueSDC2 = '';
+  String selectedValueSFilesvr = '';
+  String selectedValueSFilesvr2 = '';
+  String selectedValueSFilesvr3 = '';
+  String selectedValueSEproc = '';
+  String selectedValueSGIS = '';
+  String selectedValueSksvsvr = '';
+  String selectedValueSMetabase = '';
+  String selectedValueSCaterLuar = '';
+  String selectedValueSCaterSBY = '';
+  String selectedValueSWebsiteSBY = '';
+  String selectedValueSTablue = '';
+  String selectedValueSTapesvr = '';
 
   @override
   Widget build(BuildContext context) {
@@ -40,20 +40,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSMail,
                     onChanged: (value) =>
-                        setState(() => selectedValueSMail = 1),
+                        setState(() => selectedValueSMail = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSMail,
                     onChanged: (value) =>
-                        setState(() => selectedValueSMail = 2),
+                        setState(() => selectedValueSMail = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -80,18 +80,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSSKA,
-                    onChanged: (value) => setState(() => selectedValueSSKA = 1),
+                    onChanged: (value) =>
+                        setState(() => selectedValueSSKA = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSSKA,
-                    onChanged: (value) => setState(() => selectedValueSSKA = 2),
+                    onChanged: (value) =>
+                        setState(() => selectedValueSSKA = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -118,18 +120,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSDC2,
-                    onChanged: (value) => setState(() => selectedValueSDC2 = 1),
+                    onChanged: (value) =>
+                        setState(() => selectedValueSDC2 = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSDC2,
-                    onChanged: (value) => setState(() => selectedValueSDC2 = 2),
+                    onChanged: (value) =>
+                        setState(() => selectedValueSDC2 = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -156,20 +160,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSFilesvr,
                     onChanged: (value) =>
-                        setState(() => selectedValueSFilesvr = 1),
+                        setState(() => selectedValueSFilesvr = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSFilesvr,
                     onChanged: (value) =>
-                        setState(() => selectedValueSFilesvr = 2),
+                        setState(() => selectedValueSFilesvr = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -196,20 +200,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSFilesvr2,
                     onChanged: (value) =>
-                        setState(() => selectedValueSFilesvr2 = 1),
+                        setState(() => selectedValueSFilesvr2 = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSFilesvr2,
                     onChanged: (value) =>
-                        setState(() => selectedValueSFilesvr2 = 2),
+                        setState(() => selectedValueSFilesvr2 = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -236,20 +240,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSFilesvr3,
                     onChanged: (value) =>
-                        setState(() => selectedValueSFilesvr3 = 1),
+                        setState(() => selectedValueSFilesvr3 = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSFilesvr3,
                     onChanged: (value) =>
-                        setState(() => selectedValueSFilesvr3 = 2),
+                        setState(() => selectedValueSFilesvr3 = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -276,20 +280,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSEproc,
                     onChanged: (value) =>
-                        setState(() => selectedValueSEproc = 1),
+                        setState(() => selectedValueSEproc = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSEproc,
                     onChanged: (value) =>
-                        setState(() => selectedValueSEproc = 2),
+                        setState(() => selectedValueSEproc = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -316,18 +320,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSGIS,
-                    onChanged: (value) => setState(() => selectedValueSGIS = 1),
+                    onChanged: (value) =>
+                        setState(() => selectedValueSGIS = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSGIS,
-                    onChanged: (value) => setState(() => selectedValueSGIS = 2),
+                    onChanged: (value) =>
+                        setState(() => selectedValueSGIS = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -354,20 +360,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSksvsvr,
                     onChanged: (value) =>
-                        setState(() => selectedValueSksvsvr = 1),
+                        setState(() => selectedValueSksvsvr = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSksvsvr,
                     onChanged: (value) =>
-                        setState(() => selectedValueSksvsvr = 2),
+                        setState(() => selectedValueSksvsvr = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -394,20 +400,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSMetabase,
                     onChanged: (value) =>
-                        setState(() => selectedValueSMetabase = 1),
+                        setState(() => selectedValueSMetabase = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSMetabase,
                     onChanged: (value) =>
-                        setState(() => selectedValueSMetabase = 2),
+                        setState(() => selectedValueSMetabase = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -434,20 +440,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSCaterLuar,
                     onChanged: (value) =>
-                        setState(() => selectedValueSCaterLuar = 1),
+                        setState(() => selectedValueSCaterLuar = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSCaterLuar,
                     onChanged: (value) =>
-                        setState(() => selectedValueSCaterLuar = 2),
+                        setState(() => selectedValueSCaterLuar = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -474,20 +480,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSCaterSBY,
                     onChanged: (value) =>
-                        setState(() => selectedValueSCaterSBY = 1),
+                        setState(() => selectedValueSCaterSBY = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSCaterSBY,
                     onChanged: (value) =>
-                        setState(() => selectedValueSCaterSBY = 2),
+                        setState(() => selectedValueSCaterSBY = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -514,20 +520,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSWebsiteSBY,
                     onChanged: (value) =>
-                        setState(() => selectedValueSWebsiteSBY = 1),
+                        setState(() => selectedValueSWebsiteSBY = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSWebsiteSBY,
                     onChanged: (value) =>
-                        setState(() => selectedValueSWebsiteSBY = 2),
+                        setState(() => selectedValueSWebsiteSBY = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -554,20 +560,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSTablue,
                     onChanged: (value) =>
-                        setState(() => selectedValueSTablue = 1),
+                        setState(() => selectedValueSTablue = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSTablue,
                     onChanged: (value) =>
-                        setState(() => selectedValueSTablue = 2),
+                        setState(() => selectedValueSTablue = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -594,20 +600,20 @@ class backupvmmenustate extends State<backupvmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueSTapesvr,
                     onChanged: (value) =>
-                        setState(() => selectedValueSTapesvr = 1),
+                        setState(() => selectedValueSTapesvr = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueSTapesvr,
                     onChanged: (value) =>
-                        setState(() => selectedValueSTapesvr = 2),
+                        setState(() => selectedValueSTapesvr = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(

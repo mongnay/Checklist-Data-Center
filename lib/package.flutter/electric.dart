@@ -6,9 +6,20 @@ class electricmenu extends StatefulWidget {
 }
 
 class electricmenustate extends State<electricmenu> {
-  int selectedValueUPS = 0;
-  int selectedValueGenset = 0;
-  int selectedValuePLN = 0;
+  //int _groupValue = 0;
+  //int selectedValueGenset = 0;
+  //int selectedValuePLN = 0;
+
+  String _groupValueUPS = '';
+  String _groupValueGenset = '';
+  String _groupValuePLN = '';
+
+  //void checkRadio(String value) {
+  //   setState(() {
+  //    _groupValueUPS = value;
+  //    _groupValueGenset = value;
+  //  });
+  //}
 
   @override
   Widget build(BuildContext context) {
@@ -28,18 +39,19 @@ class electricmenustate extends State<electricmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'On',
                     title: Text('On'),
-                    groupValue: selectedValueUPS,
-                    onChanged: (value) => setState(() => selectedValueUPS = 1),
+                    groupValue: _groupValueUPS,
+                    onChanged: (value) => setState(() => _groupValueUPS = 'On'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Off',
                     title: Text('Off'),
-                    groupValue: selectedValueUPS,
-                    onChanged: (value) => setState(() => selectedValueUPS = 2),
+                    groupValue: _groupValueUPS,
+                    onChanged: (value) =>
+                        setState(() => _groupValueUPS = 'Off'),
                   ),
                 ]),
               ),
@@ -60,20 +72,20 @@ class electricmenustate extends State<electricmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'On',
                     title: Text('On'),
-                    groupValue: selectedValueGenset,
+                    groupValue: _groupValueGenset,
                     onChanged: (value) =>
-                        setState(() => selectedValueGenset = 1),
+                        setState(() => _groupValueGenset = 'On'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Off',
                     title: Text('Off'),
-                    groupValue: selectedValueGenset,
+                    groupValue: _groupValueGenset,
                     onChanged: (value) =>
-                        setState(() => selectedValueGenset = 2),
+                        setState(() => _groupValueGenset = 'Off'),
                   ),
                 ]),
               ),
@@ -94,18 +106,19 @@ class electricmenustate extends State<electricmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'On',
                     title: Text('On'),
-                    groupValue: selectedValuePLN,
-                    onChanged: (value) => setState(() => selectedValuePLN = 1),
+                    groupValue: _groupValuePLN,
+                    onChanged: (value) => setState(() => _groupValuePLN = 'On'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Off',
                     title: Text('Off'),
-                    groupValue: selectedValuePLN,
-                    onChanged: (value) => setState(() => selectedValuePLN = 2),
+                    groupValue: _groupValuePLN,
+                    onChanged: (value) =>
+                        setState(() => _groupValuePLN = 'Off'),
                   ),
                 ]),
               ),

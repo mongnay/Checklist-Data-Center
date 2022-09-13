@@ -6,11 +6,11 @@ class dumpmenu extends StatefulWidget {
 }
 
 class dumpmenustate extends State<dumpmenu> {
-  int selectedValuepdamnet = 0;
-  int selectedValue12pdam = 0;
-  int selectedValuedbpost = 0;
-  int selectedValuedbout = 0;
-  int selectedValuegis = 0;
+  String selectedValuepdamnet = '';
+  String selectedValue12pdam = '';
+  String selectedValuedbpost = '';
+  String selectedValuedbout = '';
+  String selectedValuegis = '';
 
   @override
   Widget build(BuildContext context) {
@@ -30,20 +30,20 @@ class dumpmenustate extends State<dumpmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValuepdamnet,
                     onChanged: (value) =>
-                        setState(() => selectedValuepdamnet = 1),
+                        setState(() => selectedValuepdamnet = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValuepdamnet,
                     onChanged: (value) =>
-                        setState(() => selectedValuepdamnet = 2),
+                        setState(() => selectedValuepdamnet = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -70,20 +70,20 @@ class dumpmenustate extends State<dumpmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValue12pdam,
                     onChanged: (value) =>
-                        setState(() => selectedValue12pdam = 1),
+                        setState(() => selectedValue12pdam = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValue12pdam,
                     onChanged: (value) =>
-                        setState(() => selectedValue12pdam = 2),
+                        setState(() => selectedValue12pdam = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -110,20 +110,20 @@ class dumpmenustate extends State<dumpmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValuedbpost,
                     onChanged: (value) =>
-                        setState(() => selectedValuedbpost = 1),
+                        setState(() => selectedValuedbpost = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValuedbpost,
                     onChanged: (value) =>
-                        setState(() => selectedValuedbpost = 2),
+                        setState(() => selectedValuedbpost = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -150,20 +150,20 @@ class dumpmenustate extends State<dumpmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValuedbout,
                     onChanged: (value) =>
-                        setState(() => selectedValuedbout = 1),
+                        setState(() => selectedValuedbout = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValuedbout,
                     onChanged: (value) =>
-                        setState(() => selectedValuedbout = 2),
+                        setState(() => selectedValuedbout = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -190,18 +190,20 @@ class dumpmenustate extends State<dumpmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValuegis,
-                    onChanged: (value) => setState(() => selectedValuegis = 1),
+                    onChanged: (value) =>
+                        setState(() => selectedValuegis = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValuegis,
-                    onChanged: (value) => setState(() => selectedValuegis = 2),
+                    onChanged: (value) =>
+                        setState(() => selectedValuegis = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(

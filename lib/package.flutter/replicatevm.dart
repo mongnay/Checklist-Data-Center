@@ -6,21 +6,21 @@ class replicatevmmenu extends StatefulWidget {
 }
 
 class replicatevmmenustate extends State<replicatevmmenu> {
-  int selectedValueRJMail = 0;
-  int selectedValueRJSKA = 0;
-  int selectedValueRJDC2 = 0;
-  int selectedValueRJFilesvr = 0;
-  int selectedValueRJFilesvr2 = 0;
-  int selectedValueRJFilesvr3 = 0;
-  int selectedValueRJEproc = 0;
-  int selectedValueRJGIS = 0;
-  int selectedValueRJksvsvr = 0;
-  int selectedValueRJMetabase = 0;
-  int selectedValueRJCaterLuar = 0;
-  int selectedValueRJCaterSBY = 0;
-  int selectedValueRJWebsiteSBY = 0;
-  int selectedValueRJTablue = 0;
-  int selectedValueRJTapesvr = 0;
+  String selectedValueRJMail = '';
+  String selectedValueRJSKA = '';
+  String selectedValueRJDC2 = '';
+  String selectedValueRJFilesvr = '';
+  String selectedValueRJFilesvr2 = '';
+  String selectedValueRJFilesvr3 = '';
+  String selectedValueRJEproc = '';
+  String selectedValueRJGIS = '';
+  String selectedValueRJksvsvr = '';
+  String selectedValueRJMetabase = '';
+  String selectedValueRJCaterLuar = '';
+  String selectedValueRJCaterSBY = '';
+  String selectedValueRJWebsiteSBY = '';
+  String selectedValueRJTablue = '';
+  String selectedValueRJTapesvr = '';
 
   @override
   Widget build(BuildContext context) {
@@ -40,20 +40,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJMail,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJMail = 1),
+                        setState(() => selectedValueRJMail = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJMail,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJMail = 2),
+                        setState(() => selectedValueRJMail = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -80,20 +80,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJSKA,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJSKA = 1),
+                        setState(() => selectedValueRJSKA = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJSKA,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJSKA = 2),
+                        setState(() => selectedValueRJSKA = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -120,20 +120,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJDC2,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJDC2 = 1),
+                        setState(() => selectedValueRJDC2 = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJDC2,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJDC2 = 2),
+                        setState(() => selectedValueRJDC2 = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -160,20 +160,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJFilesvr,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJFilesvr = 1),
+                        setState(() => selectedValueRJFilesvr = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJFilesvr,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJFilesvr = 2),
+                        setState(() => selectedValueRJFilesvr = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -200,20 +200,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJFilesvr2,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJFilesvr2 = 1),
+                        setState(() => selectedValueRJFilesvr2 = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJFilesvr2,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJFilesvr2 = 2),
+                        setState(() => selectedValueRJFilesvr2 = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -240,20 +240,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJFilesvr3,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJFilesvr3 = 1),
+                        setState(() => selectedValueRJFilesvr3 = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJFilesvr3,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJFilesvr3 = 2),
+                        setState(() => selectedValueRJFilesvr3 = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -280,20 +280,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJEproc,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJEproc = 1),
+                        setState(() => selectedValueRJEproc = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJEproc,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJEproc = 2),
+                        setState(() => selectedValueRJEproc = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -320,20 +320,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJGIS,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJGIS = 1),
+                        setState(() => selectedValueRJGIS = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJGIS,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJGIS = 2),
+                        setState(() => selectedValueRJGIS = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -360,20 +360,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJksvsvr,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJksvsvr = 1),
+                        setState(() => selectedValueRJksvsvr = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJksvsvr,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJksvsvr = 2),
+                        setState(() => selectedValueRJksvsvr = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -400,20 +400,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJMetabase,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJMetabase = 1),
+                        setState(() => selectedValueRJMetabase = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJMetabase,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJMetabase = 2),
+                        setState(() => selectedValueRJMetabase = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -440,20 +440,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJCaterLuar,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJCaterLuar = 1),
+                        setState(() => selectedValueRJCaterLuar = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJCaterLuar,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJCaterLuar = 2),
+                        setState(() => selectedValueRJCaterLuar = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -480,20 +480,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJCaterSBY,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJCaterSBY = 1),
+                        setState(() => selectedValueRJCaterSBY = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJCaterSBY,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJCaterSBY = 2),
+                        setState(() => selectedValueRJCaterSBY = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -520,20 +520,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJWebsiteSBY,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJWebsiteSBY = 1),
+                        setState(() => selectedValueRJWebsiteSBY = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJWebsiteSBY,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJWebsiteSBY = 2),
+                        setState(() => selectedValueRJWebsiteSBY = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -560,20 +560,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJTablue,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJTablue = 1),
+                        setState(() => selectedValueRJTablue = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJTablue,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJTablue = 2),
+                        setState(() => selectedValueRJTablue = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -600,20 +600,20 @@ class replicatevmmenustate extends State<replicatevmmenu> {
               Container(
                 width: 200,
                 child: Column(children: <Widget>[
-                  RadioListTile<int>(
-                    value: 1,
+                  RadioListTile(
+                    value: 'Success',
                     title: Text('Success'),
                     groupValue: selectedValueRJTapesvr,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJTapesvr = 1),
+                        setState(() => selectedValueRJTapesvr = 'Success'),
                   ),
                   //Spacer(),
-                  RadioListTile<int>(
-                    value: 2,
+                  RadioListTile(
+                    value: 'Failed',
                     title: Text('Failed'),
                     groupValue: selectedValueRJTapesvr,
                     onChanged: (value) =>
-                        setState(() => selectedValueRJTapesvr = 2),
+                        setState(() => selectedValueRJTapesvr = 'Failed'),
                   ),
                   TextField(
                     decoration: InputDecoration(
