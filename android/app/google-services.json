@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "400794557212",
+    "project_id": "checklist-data-center-44033",
+    "storage_bucket": "checklist-data-center-44033.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400794557212:android:e5013efdd2d63934bff8d9",
+        "android_client_info": {
+          "package_name": "com.kanaeru.checklist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400794557212-l79povem4ej9aa9lfuhbvmnsokmaimtv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoo5LabZvW4hWD2YpVbO3DHFu0yLHSgHE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "400794557212-l79povem4ej9aa9lfuhbvmnsokmaimtv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
