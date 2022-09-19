@@ -1,3 +1,4 @@
+import 'package:checklist/package.flutter/komponen.dart';
 import 'package:flutter/material.dart';
 
 class replicatevmmenu extends StatefulWidget {
@@ -626,7 +627,12 @@ class replicatevmmenustate extends State<replicatevmmenu> {
             ]),
           ),
           MaterialButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(
+                context,
+                MaterialPageRoute(builder: (context) => komponenMenu()),
+              );
+            },
             color: Color(0xff3531b9),
             elevation: 0,
             shape: RoundedRectangleBorder(

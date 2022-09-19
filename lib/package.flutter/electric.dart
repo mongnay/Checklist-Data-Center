@@ -1,3 +1,4 @@
+import 'package:checklist/package.flutter/aspek.dart';
 import 'package:flutter/material.dart';
 
 class electricmenu extends StatefulWidget {
@@ -125,7 +126,10 @@ class electricmenustate extends State<electricmenu> {
             ]),
           ),
           MaterialButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context,
+                  MaterialPageRoute(builder: (context) => aspekMenu()));
+            },
             color: Color(0xff3531b9),
             elevation: 0,
             shape: RoundedRectangleBorder(

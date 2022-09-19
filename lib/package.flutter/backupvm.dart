@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'komponen.dart';
+
 class backupvmmenu extends StatefulWidget {
   @override
   backupvmmenustate createState() => backupvmmenustate();
@@ -626,7 +628,12 @@ class backupvmmenustate extends State<backupvmmenu> {
             ]),
           ),
           MaterialButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(
+                context,
+                MaterialPageRoute(builder: (context) => komponenMenu()),
+              );
+            },
             color: Color(0xff3531b9),
             elevation: 0,
             shape: RoundedRectangleBorder(

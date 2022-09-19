@@ -1,7 +1,9 @@
+import 'package:checklist/package.flutter/aspek.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class keteranganMenu extends StatelessWidget {
-  const keteranganMenu({super.key});
+  final notes = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +20,21 @@ class keteranganMenu extends StatelessWidget {
                 height: 200,
                 padding: EdgeInsets.all(20),
                 child: TextField(
+                  controller: notes,
                   expands: true,
                   maxLines: null,
                 ),
               ),
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  final catatan = notes.text;
+
+                  createKeterangan(
+                    catatan: catatan,
+                  );
+                  Navigator.pop(context,
+                      MaterialPageRoute(builder: (context) => aspekMenu()));
+                },
                 color: Color(0xff3531b9),
                 elevation: 0,
                 shape: RoundedRectangleBorder(
@@ -48,4 +59,33 @@ class keteranganMenu extends StatelessWidget {
       ),
     );
   }
+
+  void createKeterangan({required String catatan}) async {
+    final docKeterangan =
+        FirebaseFirestore.instance.collection('keterangan').doc();
+
+    final ket = Ket(
+      catatan: catatan,
+      date: DateTime.now(),
+    );
+
+    final json = ket.toJson();
+
+    await docKeterangan.set(json);
+  }
+}
+
+class Ket {
+  final String catatan;
+  final DateTime date;
+
+  Ket({
+    required this.catatan,
+    required this.date,
+  });
+
+  Map<String, dynamic> toJson() => {
+        'catatan': catatan,
+        'date': date,
+      };
 }

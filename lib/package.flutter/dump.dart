@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'komponen.dart';
+
 class dumpmenu extends StatefulWidget {
   @override
   dumpmenustate createState() => dumpmenustate();
@@ -216,7 +218,12 @@ class dumpmenustate extends State<dumpmenu> {
             ]),
           ),
           MaterialButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(
+                context,
+                MaterialPageRoute(builder: (context) => komponenMenu()),
+              );
+            },
             color: Color(0xff3531b9),
             elevation: 0,
             shape: RoundedRectangleBorder(

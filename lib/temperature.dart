@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+import 'package.flutter/aspek.dart';
+
 class temperMenu extends StatelessWidget {
   final suhuRNI = TextEditingController();
   final humidityRNI = TextEditingController();
@@ -122,6 +124,9 @@ class temperMenu extends StatelessWidget {
                     humidity_rack_a: humidity_rack_a,
                     suhu_rack_f: suhu_rack_f,
                     humidity_rack_f: humidity_rack_f);
+
+                Navigator.pop(context,
+                    MaterialPageRoute(builder: (context) => aspekMenu()));
               },
               color: Color(0xff3531b9),
               elevation: 0,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'komponen.dart';
+
 //selectedValuerman
 class rmanmenu extends StatefulWidget {
   @override
@@ -53,7 +55,12 @@ class rmanmenustate extends State<rmanmenu> {
             ]),
           ),
           MaterialButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(
+                context,
+                MaterialPageRoute(builder: (context) => komponenMenu()),
+              );
+            },
             color: Color(0xff3531b9),
             elevation: 0,
             shape: RoundedRectangleBorder(
