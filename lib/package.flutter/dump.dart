@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'komponen.dart';
 
 class dumpmenu extends StatefulWidget {
@@ -9,10 +9,15 @@ class dumpmenu extends StatefulWidget {
 
 class dumpmenustate extends State<dumpmenu> {
   String selectedValuepdamnet = '';
+  final keteranganpdamnet = TextEditingController();
   String selectedValue12pdam = '';
+  final keterangan12pdam = TextEditingController();
   String selectedValuedbpost = '';
+  final keterangandbpost = TextEditingController();
   String selectedValuedbout = '';
+  final keterangandbout = TextEditingController();
   String selectedValuegis = '';
+  final keterangangis = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +53,7 @@ class dumpmenustate extends State<dumpmenu> {
                         setState(() => selectedValuepdamnet = 'Failed'),
                   ),
                   TextField(
+                    controller: keteranganpdamnet,
                     decoration: InputDecoration(
                       hintText: 'Keterangan',
                       border: OutlineInputBorder(),
@@ -88,6 +94,7 @@ class dumpmenustate extends State<dumpmenu> {
                         setState(() => selectedValue12pdam = 'Failed'),
                   ),
                   TextField(
+                    controller: keterangan12pdam,
                     decoration: InputDecoration(
                       hintText: 'Keterangan',
                       border: OutlineInputBorder(),
@@ -128,6 +135,7 @@ class dumpmenustate extends State<dumpmenu> {
                         setState(() => selectedValuedbpost = 'Failed'),
                   ),
                   TextField(
+                    controller: keterangandbpost,
                     decoration: InputDecoration(
                       hintText: 'Keterangan',
                       border: OutlineInputBorder(),
@@ -168,6 +176,7 @@ class dumpmenustate extends State<dumpmenu> {
                         setState(() => selectedValuedbout = 'Failed'),
                   ),
                   TextField(
+                    controller: keterangandbout,
                     decoration: InputDecoration(
                       hintText: 'Keterangan',
                       border: OutlineInputBorder(),
@@ -208,6 +217,7 @@ class dumpmenustate extends State<dumpmenu> {
                         setState(() => selectedValuegis = 'Failed'),
                   ),
                   TextField(
+                    controller: keterangangis,
                     decoration: InputDecoration(
                       hintText: 'Keterangan',
                       border: OutlineInputBorder(),
@@ -219,6 +229,29 @@ class dumpmenustate extends State<dumpmenu> {
           ),
           MaterialButton(
             onPressed: () {
+              final status_pdamnet = selectedValuepdamnet;
+              final keterangan_pdamnet = keteranganpdamnet.text;
+              final status_12pdam = selectedValue12pdam;
+              final keterangan_12pdam = keterangan12pdam.text;
+              final status_dbpost = selectedValuedbpost;
+              final keterangan_dbpost = keterangandbpost.text;
+              final status_dbout = selectedValuedbout;
+              final keterangan_dbout = keterangandbout.text;
+              final status_gis = selectedValuegis;
+              final keterangan_gis = keterangangis.text;
+
+              createDump(
+                  status_pdamnet: status_pdamnet,
+                  keterangan_pdamnet: keterangan_pdamnet,
+                  status_12pdam: status_12pdam,
+                  keterangan_12pdam: keterangan_12pdam,
+                  status_dbpost: status_dbpost,
+                  keterangan_dbpost: keterangan_dbpost,
+                  status_dbout: status_dbout,
+                  keterangan_dbout: keterangan_dbout,
+                  status_gis: status_gis,
+                  keterangan_gis: keterangan_gis);
+
               Navigator.pop(
                 context,
                 MaterialPageRoute(builder: (context) => komponenMenu()),
@@ -246,4 +279,77 @@ class dumpmenustate extends State<dumpmenu> {
       ),
     );
   }
+
+  void createDump(
+      {required String status_pdamnet,
+      keterangan_pdamnet,
+      status_12pdam,
+      keterangan_12pdam,
+      status_dbpost,
+      keterangan_dbpost,
+      status_dbout,
+      keterangan_dbout,
+      status_gis,
+      keterangan_gis}) async {
+    final docDump = FirebaseFirestore.instance.collection('dump').doc();
+
+    final dump = Dump(
+      status_pdamnet: status_pdamnet,
+      keterangan_pdamnet: keterangan_pdamnet,
+      status_12pdam: status_12pdam,
+      keterangan_12pdam: keterangan_12pdam,
+      status_dbpost: status_dbpost,
+      keterangan_dbpost: keterangan_dbpost,
+      status_dbout: status_dbout,
+      keterangan_dbout: keterangan_dbout,
+      status_gis: status_gis,
+      keterangan_gis: keterangan_gis,
+      date: DateTime.now(),
+    );
+    final json = dump.toJson();
+
+    await docDump.set(json);
+  }
+}
+
+class Dump {
+  final String status_pdamnet;
+  final String keterangan_pdamnet;
+  final String status_12pdam;
+  final String keterangan_12pdam;
+  final String status_dbpost;
+  final String keterangan_dbpost;
+  final String status_dbout;
+  final String keterangan_dbout;
+  final String status_gis;
+  final String keterangan_gis;
+  final DateTime date;
+
+  Dump({
+    required this.status_pdamnet,
+    required this.keterangan_pdamnet,
+    required this.status_12pdam,
+    required this.keterangan_12pdam,
+    required this.status_dbpost,
+    required this.keterangan_dbpost,
+    required this.status_dbout,
+    required this.keterangan_dbout,
+    required this.status_gis,
+    required this.keterangan_gis,
+    required this.date,
+  });
+
+  Map<String, dynamic> toJson() => {
+        'status_pdamnet.log': status_pdamnet,
+        'keterangan_pdamnet.log': keterangan_pdamnet,
+        'status_12pdam.log': status_12pdam,
+        'keterangan_12pdam.log': keterangan_12pdam,
+        'status_db_post.log': status_dbpost,
+        'keterangan_db_posy.log': keterangan_dbpost,
+        'status_dbout.log': status_dbout,
+        'keterangan_dbout.log': keterangan_dbout,
+        'status_gispdam.log': status_gis,
+        'keterangan_gispdam.log': keterangan_gis,
+        'date': date,
+      };
 }

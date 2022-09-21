@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:checklist/package.flutter/aspek.dart';
 
 class jaringanmenu extends StatefulWidget {
   @override
@@ -116,7 +118,19 @@ class jaringanmenustate extends State<jaringanmenu> {
             ]),
           ),
           MaterialButton(
-            onPressed: () {},
+            onPressed: () {
+              final status_ngagel = selectedValueNgagel;
+              final status_gudang = selectedValueGudang;
+              final status_karang_pilang = selectedValueKarangPilang;
+
+              createJaringan(
+                  status_ngagel: status_ngagel,
+                  status_gudang: status_gudang,
+                  status_karang_pilang: status_karang_pilang);
+
+              Navigator.pop(context,
+                  MaterialPageRoute(builder: (context) => aspekMenu()));
+            },
             color: Color(0xff3531b9),
             elevation: 0,
             shape: RoundedRectangleBorder(
@@ -139,4 +153,42 @@ class jaringanmenustate extends State<jaringanmenu> {
       ),
     );
   }
+
+  void createJaringan(
+      {required String status_ngagel,
+      status_gudang,
+      status_karang_pilang}) async {
+    final docJaringan = FirebaseFirestore.instance.collection('jaringan').doc();
+
+    final jar = Jar(
+      status_ngagel: status_ngagel,
+      status_gudang: status_gudang,
+      status_karang_pilang: status_karang_pilang,
+      date: DateTime.now(),
+    );
+    final json = jar.toJson();
+
+    await docJaringan.set(json);
+  }
+}
+
+class Jar {
+  final String status_ngagel;
+  final String status_gudang;
+  final String status_karang_pilang;
+  final DateTime date;
+
+  Jar({
+    required this.status_ngagel,
+    required this.status_gudang,
+    required this.status_karang_pilang,
+    required this.date,
+  });
+
+  Map<String, dynamic> toJson() => {
+        'status_ngagel': status_ngagel,
+        'status_gudang': status_gudang,
+        'status_karang_pilang': status_karang_pilang,
+        'date': date,
+      };
 }
