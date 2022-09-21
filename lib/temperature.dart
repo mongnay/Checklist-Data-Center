@@ -125,6 +125,15 @@ class temperMenu extends StatelessWidget {
                     suhu_rack_f: suhu_rack_f,
                     humidity_rack_f: humidity_rack_f);
 
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          content: Text(suhuRNI.text),
+                        );
+                      },
+                    );
+
                 Navigator.pop(context,
                     MaterialPageRoute(builder: (context) => aspekMenu()));
               },
@@ -152,7 +161,7 @@ class temperMenu extends StatelessWidget {
     );
   }
 
-  void createTemperature(
+  Future createTemperature(
       {required String suhu_rack_network_internal,
       humidity_rack_network_internal,
       suhu_rack_a,
