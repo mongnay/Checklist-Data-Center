@@ -1,20 +1,9 @@
 import 'package:checklist/calenderPick.dart';
 import 'package:checklist/package.flutter/komponen.dart';
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
-class shiftselectionMenu extends StatefulWidget {
-  @override
-  shiftselectionstate createState() => shiftselectionstate();
-}
-
-class shiftselectionstate extends State<shiftselectionMenu> {
-  //const shiftselectionMenu({Key? key}) : super(key: key);
-  final shift1 = TextEditingController();
-  final shift2 = TextEditingController();
-  final shift3 = TextEditingController();
-
-  String shift1value = '';
+class shiftselectionMenu extends StatelessWidget {
+  const shiftselectionMenu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

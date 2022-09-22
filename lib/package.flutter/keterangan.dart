@@ -27,6 +27,25 @@ class keteranganMenu extends StatelessWidget {
               ),
               MaterialButton(
                 onPressed: () {
+                  if (notes != null) {
+                    showDialog(
+                        context: context,
+                        builder: (ctx) => AlertDialog(
+                              title: Text("Review"),
+                              content: Text("Keterangan Tersimpan"),
+                              actions: <Widget>[
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.of(ctx).pop();
+                                    },
+                                    child: Container(
+                                      color: Colors.white,
+                                      padding: EdgeInsets.all(14),
+                                      child: Text("Selesai"),
+                                    ))
+                              ],
+                            ));
+                  }
                   final catatan = notes.text;
 
                   createKeterangan(

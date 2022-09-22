@@ -1,6 +1,5 @@
-import 'package:checklist/package.flutter/keterangan.dart';
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'komponen.dart';
 
 //selectedValuerman
@@ -10,7 +9,6 @@ class rmanmenu extends StatefulWidget {
 }
 
 class rmanmenustate extends State<rmanmenu> {
-  final keteranganRMAN = TextEditingController();
   String selectedValuerman = '';
 
   @override
@@ -47,7 +45,6 @@ class rmanmenustate extends State<rmanmenu> {
                         setState(() => selectedValuerman = 'Failed'),
                   ),
                   TextField(
-                    controller: keteranganRMAN,
                     decoration: InputDecoration(
                       hintText: 'Keterangan',
                       border: OutlineInputBorder(),
@@ -59,12 +56,6 @@ class rmanmenustate extends State<rmanmenu> {
           ),
           MaterialButton(
             onPressed: () {
-              final status_rman = selectedValuerman;
-              final keterangan_rman = keteranganRMAN.text;
-
-              createRman(
-                  status_rman: status_rman, keterangan_rman: keterangan_rman);
-
               Navigator.pop(
                 context,
                 MaterialPageRoute(builder: (context) => komponenMenu()),
@@ -92,35 +83,4 @@ class rmanmenustate extends State<rmanmenu> {
       ),
     );
   }
-
-  void createRman({required String status_rman, keterangan_rman}) async {
-    final docRman = FirebaseFirestore.instance.collection('rman').doc();
-
-    final rman = Rman(
-      status_rman: status_rman,
-      keterangan_rman: keterangan_rman,
-      date: DateTime.now(),
-    );
-    final json = rman.toJson();
-
-    await docRman.set(json);
-  }
-}
-
-class Rman {
-  final String status_rman;
-  final String keterangan_rman;
-  final DateTime date;
-
-  Rman({
-    required this.status_rman,
-    required this.keterangan_rman,
-    required this.date,
-  });
-
-  Map<String, dynamic> toJson() => {
-        'status_pdamcdb.log': status_rman,
-        'keterangan_pdamdcdb.log': keterangan_rman,
-        'date': date,
-      };
 }

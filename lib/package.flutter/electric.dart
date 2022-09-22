@@ -1,6 +1,5 @@
 import 'package:checklist/package.flutter/aspek.dart';
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class electricmenu extends StatefulWidget {
   @override
@@ -8,9 +7,20 @@ class electricmenu extends StatefulWidget {
 }
 
 class electricmenustate extends State<electricmenu> {
+  //int _groupValue = 0;
+  //int selectedValueGenset = 0;
+  //int selectedValuePLN = 0;
+
   String _groupValueUPS = '';
   String _groupValueGenset = '';
   String _groupValuePLN = '';
+
+  //void checkRadio(String value) {
+  //   setState(() {
+  //    _groupValueUPS = value;
+  //    _groupValueGenset = value;
+  //  });
+  //}
 
   @override
   Widget build(BuildContext context) {
@@ -117,15 +127,6 @@ class electricmenustate extends State<electricmenu> {
           ),
           MaterialButton(
             onPressed: () {
-              final status_ups = _groupValueUPS;
-              final status_genset = _groupValueGenset;
-              final status_pln = _groupValuePLN;
-
-              createElectric(
-                  status_ups: status_ups,
-                  status_genset: status_genset,
-                  status_pln: status_pln);
-
               Navigator.pop(context,
                   MaterialPageRoute(builder: (context) => aspekMenu()));
             },
@@ -151,40 +152,4 @@ class electricmenustate extends State<electricmenu> {
       ),
     );
   }
-
-  void createElectric(
-      {required String status_ups, status_genset, status_pln}) async {
-    final docElectric = FirebaseFirestore.instance.collection('electric').doc();
-
-    final elec = Elec(
-      status_ups: status_ups,
-      status_genset: status_genset,
-      status_pln: status_pln,
-      date: DateTime.now(),
-    );
-    final json = elec.toJson();
-
-    await docElectric.set(json);
-  }
-}
-
-class Elec {
-  final String status_ups;
-  final String status_genset;
-  final String status_pln;
-  final DateTime date;
-
-  Elec({
-    required this.status_ups,
-    required this.status_genset,
-    required this.status_pln,
-    required this.date,
-  });
-
-  Map<String, dynamic> toJson() => {
-        'status_ups': status_ups,
-        'status_genset': status_genset,
-        'status_pln': status_pln,
-        'date': date,
-      };
 }
